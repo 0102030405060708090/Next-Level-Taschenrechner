@@ -1,0 +1,41 @@
+def addiere(x, y):
+    return x + y
+
+def subtrahiere(x, y):
+    return x - y
+
+def multiplyiziere(x, y):
+    return x * y
+
+def dividiere(x, y):
+    return x / y
+
+# Benutzereingabe (Welcher Rechenvorgang)
+print("Was möchtest du tun?")
+print("1.Addieren")
+print("2.Subtrahieren")
+print("3.Multiplizieren")
+print("4.Dividieren")
+
+Rechnung = input("Gib deine Wahl ein(1/2/3/4):")
+            
+while True:
+    try:
+        num1 = int(input("Die erste Zahl der Rechnung lautet: "))
+        num2 = int(input("Die zweite Zahl der Rechnung lautet: "))
+        break
+    except: print("Bitte gib eine Zahl ein")
+
+if Rechnung == '1':
+   print(num1,"+",num2,"=", addiere(num1,num2))
+
+elif Rechnung == '2':
+   print(num1,"-",num2,"=", subtrahiere(num1,num2))
+
+elif Rechnung == '3':
+   print(num1,"*",num2,"=", multipliziere(num1,num2))
+
+elif Rechnung == '4':
+   print(num1,"/",num2,"=", dividiere(num1,num2))
+else:
+   print("Du hast keine gültige Rechnung ausgewählt. Versuch es doch nochmal!")
